@@ -28,7 +28,7 @@
 
 ## Технологии
 
-React, Python (Django)
+React, Python (Flask)
 
 ## Wiki
 
