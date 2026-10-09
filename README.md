@@ -28,7 +28,66 @@
 
 ## Технологии
 
-React, Python (Flask)
+- Frontend: React (Vite)
+- Backend: Python (Flask)
+- ИИ: нейросеть Yandex AI Studio
+
+## Структура репозитория
+
+```
+project/
+├── backend/             
+│   ├── app.py
+│   ├── requirements.txt
+│   └── .env.example     
+├── frontend/            
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── .gitignore
+└── README.md
+```
+
+Документация проекта лежит в [Wiki](../../wiki), а не в репозитории.
+
+## Как запустить
+
+Нужны Python 3.10+ и Node.js 18+.
+
+### Backend
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate            # Windows
+# source venv/bin/activate       # macOS / Linux
+pip install -r requirements.txt
+```
+
+Создайте файл `.env` на основе `.env.example` и заполните его:
+
+```
+YANDEX_API_KEY=ваш_ключ
+YANDEX_FOLDER_ID=ваш_folder_id
+```
+
+Файл `.env` содержит секреты и не попадает в репозиторий. Запуск сервера:
+
+```bash
+python app.py
+```
+
+Сервер будет доступен по адресу `http://localhost:5000`.
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Приложение откроется по адресу `http://localhost:5173`.
 
 ## Wiki
 
